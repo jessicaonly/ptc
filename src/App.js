@@ -22,7 +22,7 @@ class App extends Component {
   getBusiness = async (e) => {
     const businessName = e.target.elements.businessName.value;
     e.preventDefault();
-    const api_call = await fetch(`http://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${user_position.lat},${user_position.lng}&radius=1500&keyword=${businessName}&key=${API_KEY}`);
+    const api_call = await fetch(`http://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${user_position.lat},${user_position.lng}&rankby=distance&keyword=${businessName}&key=${API_KEY}`);
     const data = await api_call.json();
     console.log(data)
     if (data.results.photos !== null){
