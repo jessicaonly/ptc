@@ -15,7 +15,10 @@ const Businesses = props => (
               </span></p>
           </div>
           <button className="business__button">
-            <Link to={{ pathname: `/business/${business.reference}` }}>View Business</Link>
+            <Link to={{ 
+            pathname: `/business/${business.reference}`,
+            state: { business: business.place_id }
+            }}>View Business</Link>
           </button>
         </div>
        )
