@@ -2,8 +2,7 @@
 
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-
+import './App.css'
 
 import Form from './Components/Form';
 import Businesses from './Components/Businesses'
