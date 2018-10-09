@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 
 const Businesses = props => (
   <div className="container">
@@ -13,7 +14,9 @@ const Businesses = props => (
                 { business.vicinity }
               </span></p>
           </div>
-          <button className="business__button">View Business </button>
+          <button className="business__button">
+            <Link to={{ pathname: `/business/${business.reference}` }}>View Business</Link>
+          </button>
         </div>
        )
     }) }
@@ -28,8 +31,6 @@ export default Businesses;
 
 
 
-{/* <div key={ business.id }>
-<p>{ business.name }</p>
-</div> */}
+
 
 // .length < 20 ? `${ business.name }` : `${ business.name.substring(0,25)}...`}

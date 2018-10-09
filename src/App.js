@@ -1,7 +1,7 @@
 /* global google */
 
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { withRouter, BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css'
 
 import Form from './Components/Form';
